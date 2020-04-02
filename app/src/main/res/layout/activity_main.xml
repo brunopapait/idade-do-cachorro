@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4EAB2"
+    android:background="#8E8FA5"
     tools:context=".MainActivity">
 
     <ImageView
@@ -22,8 +22,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:lineSpacingExtra="10sp"
         android:text="Informe a idade do seu CACHORRO "
         android:textColor="#031649"
@@ -33,7 +31,7 @@
         app:fontFamily="serif"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877" />
@@ -45,7 +43,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginBottom="200dp"
         android:lineSpacingExtra="10sp"
-        android:text="Para descobrir sua idade em anos humanos"
+        android:text="Para descobrir sua idade em anos humanos."
         android:textColor="#031649"
         android:textSize="18sp"
         android:textStyle="italic"
@@ -58,43 +56,39 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="36dp"
+        android:background="#211F45"
         android:onClick="calcular"
         android:text="CALCULAR"
+        android:textColor="#FFFEFE"
+        android:typeface="monospace"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:textColor="#101233"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idade" />
 
     <EditText
         android:id="@+id/idade"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:layout_marginBottom="105dp"
         android:ems="10"
-        android:hint="Informe a idade aqui"
+        android:hint="    Informe a idade aqui"
         android:inputType="number"
         android:maxLength="5"
         android:onClick="limpaCampos"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:textColorHighlight="#031649"
+        android:textColorLink="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/buttonInput"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
