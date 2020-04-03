@@ -2,6 +2,7 @@ package br.com.idadedocachorro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_segunda.*
 
 class SegundaActivity : AppCompatActivity() {
@@ -20,5 +21,9 @@ class SegundaActivity : AppCompatActivity() {
         val idade = idade.toInt();
         val idadeFinal = idade * 7;
         mostraIdade.setText("A idade do seu cachorro é de " + idadeFinal.toString() + " anos humanos.");
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 }

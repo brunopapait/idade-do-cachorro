@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("idade", idade);
                 startActivity(intent);
             } else {
-                Toast.makeText(this, "Por favor informe a idade !", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Por favor informe a idade !", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -49,5 +49,13 @@ class MainActivity : AppCompatActivity() {
             campoValidado = false;
         }
         return campoValidado;
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 }
